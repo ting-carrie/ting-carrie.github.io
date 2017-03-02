@@ -5,16 +5,40 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###我的第一个">
+  <meta name="description" content="Document
+    
+         #result{
+             width: 600px;
+             margin: 30px auto;
+             background: greenyellow;
+             padding: 30px;
+         }
+         #result spa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2017/03/02/one/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/02/乘法口诀的输出/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="###我的第一个">
-<meta property="og:updated_time" content="2017-03-02T05:11:39.004Z">
+<meta property="og:description" content="Document
+    
+         #result{
+             width: 600px;
+             margin: 30px auto;
+             background: greenyellow;
+             padding: 30px;
+         }
+         #result spa">
+<meta property="og:updated_time" content="2017-03-02T08:49:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="###我的第一个">
+<meta name="twitter:description" content="Document
+    
+         #result{
+             width: 600px;
+             margin: 30px auto;
+             background: greenyellow;
+             padding: 30px;
+         }
+         #result spa">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,10 +87,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-one" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-乘法口诀的输出" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/02/one/" class="article-date">
-  <time datetime="2017-03-02T05:10:39.541Z" itemprop="datePublished">2017-03-02</time>
+    <a href="/2017/03/02/乘法口诀的输出/" class="article-date">
+  <time datetime="2017-03-02T11:14:16.825Z" itemprop="datePublished">2017-03-02</time>
 </a>
     
   </div>
@@ -75,12 +99,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###我的第一个</p>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+         #result{
+             width: 600px;
+             margin: 30px auto;
+             background: greenyellow;
+             padding: 30px;
+         }
+         #result span{
+             width: 60px;
+             height: 25px;
+             border: 1px solid #ddd;
+             text-align: center;
+             line-height: 25px;
+             font-size: 12px;
+             display: inline-block;
+         }
+    </style>
+</head>
+<body>
+   <div id="result">
+       
+   </div>
+</body>
+<script>
+    window.addEventListener('load',function(){
+        var reslut=document.getElementById('result')
+        function create(){
+            var arr=[];
+            for(var i=1;i<10;i++){
+                for(var j=1;j<=i;j++){
+                    arr.push('<span>'+j+'*'+i+'='+i*j+'</span>')
+                }
+                arr.push('<br/>')
+            }
+            return arr;
+        }
 
+        function render(){
+            var html=create(),
+                i=0,
+                timer=null,
+                j=html.length,
+                tmp=create();
+            timer=setInterval(function(){
+                if(i<j){
+                    result.innerHTML+=tmp[i++];
+                } else{
+                    html.splice(html.length-1,1)
+                    reslut.innerHTML=html.join('')
+                }
+                if(!html.length)  {
+                    result.innerHTML=tmp.join('')
+                    clearInterval(timer);
+                }
+            },100)
+        }
+        render();
+    })
+</script>
+</html>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/02/one/" data-id="cizrxpcxs0000nsuxyoxfciv3" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/02/乘法口诀的输出/" data-id="cizsappfw0000rguxhs0mvdkh" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -89,19 +176,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/02/乘法口诀的输出/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/02/one/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
